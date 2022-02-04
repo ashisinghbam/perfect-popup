@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap');
+
+:root {
+  --main-color: #00316d;
+  --sub-color: #790000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(
+    to left bottom,
+    var(--main-color),
+    var(--sub-color)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.btn {
+  font-family: inherit;
+  padding: 1rem 5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.popup-container {
+  height: 60vh;
+  width: 60vh;
+  border: 0.5rem solid var(--main-color);
+  background-color: var(--sub-color);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.1s ease-out;
+}
+
+.btn.open {
+  opacity: 0;
+}
+
+.popup-container.open {
+  transform: scale(1);
+}
+
+.popup-content h1 {
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.popup-content p {
+  padding: 2rem;
+  line-height: 2;
+}
+
+.close-btn {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
