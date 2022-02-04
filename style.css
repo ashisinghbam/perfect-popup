@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap');
 
+/********************************
+GENERAL CSS
+********************************/
+
 :root {
   --main-color: #00316d;
   --sub-color: #790000;
@@ -25,6 +29,20 @@ body {
   color: #fff;
 }
 
+.property-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/********************************
+PRIMARY BUTTON
+********************************/
+
 .btn {
   font-family: inherit;
   padding: 1rem 5rem;
@@ -32,8 +50,11 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   position: relative;
-  cursor: pointer;
 }
+
+/********************************
+POPUP CONTAINER
+********************************/
 
 .popup-container {
   height: 60vh;
@@ -41,19 +62,8 @@ body {
   border: 0.5rem solid var(--main-color);
   background-color: var(--sub-color);
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transform: scale(0);
   transition: all 0.1s ease-out;
-}
-
-.btn.open {
-  opacity: 0;
-}
-
-.popup-container.open {
-  transform: scale(1);
 }
 
 .popup-content h1 {
@@ -67,16 +77,28 @@ body {
   line-height: 2;
 }
 
+/********************************
+CLOSE BUTTON
+********************************/
+
 .close-btn {
   height: 1.5rem;
   width: 1.5rem;
   background-color: var(--main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
   border-radius: 100%;
-  cursor: pointer;
+}
+
+/********************************
+OPEN CLASS APPLIED
+********************************/
+
+.btn.open {
+  opacity: 0;
+}
+
+.popup-container.open {
+  transform: scale(1);
 }
