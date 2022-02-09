@@ -11,3 +11,5 @@ closeBtn.addEventListener('click', () => {
   btn.classList.remove('open')
   popupContainer.classList.remove('open')
 })
+
+console.log('hello world')
